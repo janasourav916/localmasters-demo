@@ -4,5 +4,7 @@
 
 ## Setup Guide
 
-- npm install
-- npm run dev
+- `git clone git@github.com:janasourav916/localmasters-demo.git`
+- `npm install`
+- `npm run dev`
+
