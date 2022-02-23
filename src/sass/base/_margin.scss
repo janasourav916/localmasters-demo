@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+$count:0;
+@each $space in $spacings{
+    .m-#{$count} {
+        margin: $space;
+    }
+    .mt-#{$count} {
+        margin-top: $space;
+    }
+    .mr-#{$count} {
+        margin-right: $space;
+    }
+    .mb-#{$count} {
+        margin-bottom: $space;
+    }
+    .ml-#{$count} {
+        margin-left: $space;
+    }
+    .mx-#{$count}{
+        margin-left: $space;
+        margin-right: $space;
+    }
+    .my-#{$count}{
+        margin-top: $space;
+        margin-bottom: $space;
+    }
+    $count:$count+1
+}

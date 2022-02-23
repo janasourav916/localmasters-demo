@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+.nav{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: $spacing-s $spacing-l;
+    span{
+        color:$light
+    }
+    img{
+        margin-right:$spacing-s;
+    }
+}

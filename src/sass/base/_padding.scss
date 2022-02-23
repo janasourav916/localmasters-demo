@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+$index:0;
+@each $space in $spacings{
+    .p-#{$index} {
+        padding: $space!important;
+    }
+    .pt-#{$index} {
+        padding-top: $space;
+    }
+    .pr-#{$index} {
+        padding-right: $space;
+    }
+    .pb-#{$index} {
+        padding-bottom: $space;
+    }
+    .pl-#{$index} {
+        padding-left: $space;
+    }
+    .px-#{$index}{
+        padding-left: $space;
+        padding-right: $space;
+    }
+    .py-#{$index}{
+        padding-top: $space;
+        padding-bottom: $space;
+    }
+    $index:$index+1
+}

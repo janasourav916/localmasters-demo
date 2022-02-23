@@ -1,0 +1,36 @@
+$primary:#17B85A;
+$warning:#F78026;
+$info:#4DA4E8;
+$primary-100:#cfeed7;
+$info-100:#d5e8fa;
+$warning-100:#fee0cc;
+$light:#FFFFFF;
+$dark:#1D384D;
+$grey:#E5E5E5;
+$divider:#e6e6e6;
+// text color
+$text-dark:#272727;
+$text-primary:$primary;
+$text-warning:$warning;
+$text-info:$info;
+$text-light:$light;
+$text-grey:#989898;
+
+//background
+$page-background:$grey;
+$card-background:$light;
+
+//buttons
+$button-primary:$primary;
+
+$sidebar-width:250px;
+
+//spacer
+$spacer:1rem;
+$spacing-s:  $spacer * .5;
+$spacing-m:  $spacer;
+$spacing-l:  $spacer * 1.5;
+$spacing-xl: $spacer * 3;
+$spacings: 0, $spacer*.25 , $spacing-s, $spacing-m, $spacing-l, $spacing-xl;
+
+$width-list: 25, 50, 75, 100;

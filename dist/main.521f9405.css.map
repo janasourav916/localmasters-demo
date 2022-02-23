@@ -1,0 +1,1 @@
+{"version":3,"sources":["sass/layout/_sidebar.scss"],"names":[],"mappings":"AAAA,IAAI,CAAJ,oBAAI;AACJ,QAAQ,CAAA;EACJ,gBAAgB,EAAE,IAAI;CACzB","file":"main.521f9405.css","sourceRoot":"../src","sourcesContent":["@use '../abstracts/' as *;\n.sidebar{\n    background-color: blue;\n}"]}

@@ -1,0 +1,23 @@
+@use '../abstracts/' as *;
+.button{
+    background: $button-primary;
+    padding: .7rem .7rem;
+    color:$light;
+    border:none;
+    svg{
+        fill:$light;
+    }
+    border-radius: 6px;
+    &.button__outlined{
+        border :1.5px solid #E3EDF7;
+        background: $light;
+        
+        svg{
+            fill:$button-primary;
+        }
+    }
+    &.button-circle{
+        border-radius: 50%;
+    }
+    
+}

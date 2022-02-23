@@ -1,0 +1,152 @@
+@use '../abstracts/' as *;
+$avatar-margin:50px;
+.manage-members{
+    display: flex;
+    height: calc(100% - 68px);
+    //sidebar
+    aside{
+        min-width:250px;
+        background-color: $light;
+    }
+    .search__wrapper{
+        background-color: $grey;
+        border-radius: 8px;
+        padding: $spacing-s $spacing-m;
+        input{
+            outline: none;
+            border: none;
+            background-color: transparent;
+        }
+        img{
+            width: 18px;
+        }
+
+        
+    }
+    .user__list{
+        .user__item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: $spacing-s $spacing-m;
+            border-bottom: 1px solid $divider;
+            input[type="checkbox"]:checked {
+               
+            }
+            .circle__text{
+                padding: $spacing-s;
+                border-radius: 50%;
+                width: 2.2rem;
+                height: 2.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &.circle__text-primary{
+                    background-color: $primary-100;
+                    color: $text-primary;
+                }   
+                &.circle__text-warning{
+                    background-color: $warning-100;
+                    color: $text-warning;
+                }
+                &.circle__text-info{
+                    background-color: $info-100;
+                    color: $text-info;
+                }
+        }
+        }
+    }
+    
+    // Main
+    .container{
+        flex:1;
+        margin: $spacing-m;
+        height: 100%;
+        .member__profile{
+            height: max-content;
+            margin-top: $avatar-margin;
+            .card__body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .card__footer{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .action{
+                    display: flex;
+                    border-right: 1px solid $divider;
+                    flex: 1;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+           .avatar{
+                margin-top:-$avatar-margin;
+            }
+        }
+        .member__features{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+            grid-gap: 1rem;
+            grid-auto-rows: max-content;
+            .feature__item{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: $text-grey;
+                .feature__title{
+                    font-size: 1.1rem;
+                }
+                .feature__count{
+                    font-size: .8rem;
+                }
+                &.active{
+                    background-color: $primary;
+                    color:$text-light;
+                }
+            }
+            
+        }
+
+        .member__services{
+            height: max-content;
+            .card__header{
+                display: flex;
+                justify-content: space-between;
+                select{
+                    min-width:100px
+                }
+            }
+            .session__row{
+                border-radius: 5px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+                gap: 1rem;
+                section:not(:last-child){
+                    border-right: 1px solid $divider;
+                }
+                .small-text{
+                    font-size: 0.8rem;
+                    opacity: .5;
+                }
+                .session__timeinfo{
+                    display: flex;
+                    align-items: center;
+                }
+                .date{
+                    color: $text-light;
+                    width: max-content;
+                    background-color: $primary;
+                    border-radius: 3px;
+                   .month{
+                       font-size: 0.8rem;
+                   }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use '../abstracts/' as *;
+.header{
+    background-color: $light;
+    min-height: 70px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-m;
+    .header__left{
+        display: flex;
+        align-items: center;
+        img{
+            margin-right: $spacing-m;
+        }
+
+    }
+    .header__right{
+        .profile{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        span{
+            font-size: 0.8rem;
+            opacity: .4;
+        }
+    }
+}

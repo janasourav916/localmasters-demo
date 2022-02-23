@@ -1,0 +1,29 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+.sidebar{
+    background-color: $dark;
+    width:$sidebar-width;
+    height: 100vh;
+    padding: $spacing-m 0;
+    &.open{
+        display: none;
+    }
+    .sidebar__header{
+        display: flex;
+        align-items: center;
+        // justify-content: space-around;
+        padding: 0px $spacing-m;
+        .dropdown{
+            width:70%;
+            color:$text-light;
+            margin-left: $spacing-m;
+            background-color: rgba(0,0,0,.1);
+        }
+       
+    }
+    
+    .group div:nth-child(1){
+        color:$light;
+        padding: $spacing-m;
+    }
+}

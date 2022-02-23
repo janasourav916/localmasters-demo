@@ -1,0 +1,13 @@
+@forward 'sidebar';
+@forward 'header';
+@forward 'main';
+
+.layout{
+    display: flex;
+   .layout-left {
+       flex:1;
+       height: 100vh;
+       overflow: auto;
+   }
+}
+

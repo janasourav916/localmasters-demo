@@ -1,0 +1,6 @@
+@use "../abstracts/" as *;
+@each $width in $width-list{
+    .w-#{$width}  {
+        width: #{$width+'%'}
+    }
+}

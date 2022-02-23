@@ -1,0 +1,11 @@
+
+@use '../abstracts/' as *;
+.card{
+    background: #FFFFFF;
+    border-radius: $spacing-m;
+    height: 100%;
+    .card-shadow{
+        box-shadow: 0px 0px 10px rgba(22, 73, 113, 0.2);
+        height: max-content;
+    }
+}
