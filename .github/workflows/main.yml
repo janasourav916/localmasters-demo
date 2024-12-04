@@ -13,4 +13,8 @@ jobs:
           run: |
             node -v
             npm -v
+        - name: List files in the repository
+          run: |
+            ls ${{ github.wrokspace }}
+        - run: echo "🍏 This job's status is ${{ job.status }}."
           
