@@ -16,4 +16,13 @@ jobs:
           node -v
           npm -v
           echo ${{ github.wrokspace }}
+      - name: Test Variables
+        run: |
+          echo "workflow >> ${{github.workflow}}"
+          echo "actor >> ${{github.actor}}"
+          echo "event_name >> ${{github.event_name}}"
+          echo "repository >> ${{github.repository}}"
+          echo "ref >> ${{github.ref}} and ref_name >> ${{github.ref_name}}"
+          echo "workspace >> ${{github.workspace}}"
+    
         
