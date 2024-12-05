@@ -1,20 +1,18 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+name: Demo Workflow
+on: 
+  push
 jobs:
-  Explore-GitHub-Actions:
+  JobOne:
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout repository code
-          uses: actions/checkout@v4
-        - name: Setup Node.js environment
-          uses: actions/setup-node@v4.1.0
-        - name: Node install Check
-          run: |
-            node -v
-            npm -v
-        - name: List files in the repository
-          run: |
-            ls ${{ github.wrokspace }}
-        - run: echo "🍏 This job's status is ${{ job.status }}."
-          
+      - name: Checkout My Project
+        uses: actions/checkout@v4
+      - name: Setup NodeJs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.9.0
+      - name: Veirfy Node Available
+        run: |
+          node -v
+          npm -v
+        
