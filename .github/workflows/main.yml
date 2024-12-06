@@ -1,28 +1,31 @@
-name: Demo Workflow
-on: 
-  push
-jobs:
-  JobOne:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout My Project
-        uses: actions/checkout@v4
-      - name: Setup NodeJs
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.9.0
-      - name: Veirfy Node Available
-        run: |
-          node -v
-          npm -v
-          echo ${{ github.wrokspace }}
-      - name: Test Variables
-        run: |
-          echo "workflow >> ${{github.workflow}}"
-          echo "actor >> ${{github.actor}}"
-          echo "event_name >> ${{github.event_name}}"
-          echo "repository >> ${{github.repository}}"
-          echo "ref >> ${{github.ref}} and ref_name >> ${{github.ref_name}}"
-          echo "workspace >> ${{github.workspace}}"
-    
+name: Test Workflow
+on: push
+jobs: 
+  FirstJob:
+      name: My First Job
+      runs-on: ubuntu-latest
+      steps: 
+        - name: Checkout My Project
+          uses: actions/checkout@v4
+        - name: Setup NodeJs
+          uses: actions/node-setup@v4
+          with: 
+            node-version: 20.9.0
+          env: 
+            AAA: Hello World
+        - name: Check Node Avaiable
+          run: |
+            node -v
+            npm -v
+            env
+        - name: GitHub Context Varaibles
+          run: |
+            echo "Workflow >> ${{github.workflow}}"
+            echo "Actor    >> ${{github.actor}}"
+            echo "Event    >> ${{github.event_name}}"
+            echo "Ref Name >> ${{github.ref_name}}"
+            echo "Repository >> ${{github.repository}}"
+            echo "Workspace >> ${{github.workspace}}"
         
+          
+    
